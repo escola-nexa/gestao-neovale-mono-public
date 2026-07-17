@@ -25,3 +25,8 @@ supabase_dump/
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables
+.env
+.env.*
+!.env.example
