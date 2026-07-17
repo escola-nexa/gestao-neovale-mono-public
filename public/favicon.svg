@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Símbolo Neovale: letra "N" estilizada simulando gráfico de aprendizagem
+       Conceito do manual de marca: pull/push + ritmo visual + amarelo institucional -->
+  <defs>
+    <style>
+      .nv-bg { fill: #1B1E2C; }
+      .nv-yellow { fill: #FFDA45; }
+      .nv-yellow-dark { fill: #EFC30A; }
+    </style>
+  </defs>
+  <rect class="nv-bg" width="200" height="200" rx="28"/>
+  <!-- N estilizado: três barras verticais ascendentes simulando crescimento -->
+  <g transform="translate(40 40)">
+    <!-- haste esquerda -->
+    <rect class="nv-yellow" x="0" y="0" width="22" height="120" rx="3"/>
+    <!-- diagonal descendente -->
+    <polygon class="nv-yellow-dark" points="22,0 44,0 98,120 76,120"/>
+    <!-- haste direita -->
+    <rect class="nv-yellow" x="98" y="0" width="22" height="120" rx="3"/>
+  </g>
+</svg>

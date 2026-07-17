@@ -1,0 +1,1 @@
+ALTER TABLE public.professor_documents ADD COLUMN IF NOT EXISTS weekly_workload_hours numeric(5,2);

@@ -1,0 +1,4 @@
+ALTER TYPE public.hr_hiring_doc_kind ADD VALUE IF NOT EXISTS 'FICHA_REGISTRO';
+ALTER TYPE public.hr_hiring_doc_kind ADD VALUE IF NOT EXISTS 'RENUNCIA_VT';
+ALTER TYPE public.hr_hiring_doc_kind ADD VALUE IF NOT EXISTS 'DECLARACAO_VT';
+ALTER TYPE public.hr_hiring_doc_kind ADD VALUE IF NOT EXISTS 'DEPENDENTE_IR';

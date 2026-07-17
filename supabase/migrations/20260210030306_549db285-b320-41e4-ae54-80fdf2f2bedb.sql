@@ -1,0 +1,1 @@
+ALTER TABLE public.orientations ADD COLUMN video_call_link text;

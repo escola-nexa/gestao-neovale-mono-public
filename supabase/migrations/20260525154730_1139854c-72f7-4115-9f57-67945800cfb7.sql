@@ -1,0 +1,2 @@
+ALTER TABLE public.teacher_substitution_requests ADD COLUMN IF NOT EXISTS batch_id uuid NULL;
+CREATE INDEX IF NOT EXISTS idx_tsr_batch ON public.teacher_substitution_requests(batch_id) WHERE batch_id IS NOT NULL;

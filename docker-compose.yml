@@ -1,0 +1,100 @@
+services:
+  database:
+    image: postgres:15-alpine
+    container_name: sigeo_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_password
+      POSTGRES_DB: sigeo_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - sigeo_network
+
+  postgrest:
+    image: postgrest/postgrest
+    container_name: sigeo_postgrest
+    ports:
+      - "3001:3000"
+    environment:
+      PGRST_DB_URI: postgres://postgres:postgres_password@database:5432/sigeo_db
+      PGRST_DB_SCHEMA: public
+      PGRST_DB_ANON_ROLE: postgres
+      PGRST_JWT_SECRET: super_secret_jwt_key_sigeo_local_32_bytes_min
+    depends_on:
+      - database
+    networks:
+      - sigeo_network
+
+  minio:
+    image: minio/minio
+    container_name: sigeo_minio
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: minio_password
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000" # API S3
+      - "9001:9001" # Web Console
+    volumes:
+      - miniodata:/data
+    networks:
+      - sigeo_network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: sigeo_backend
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - DB_HOST=database
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres_password
+      - DB_NAME=sigeo_db
+      - JWT_SECRET=super_secret_jwt_key_sigeo_local_32_bytes_min
+      - MINIO_ENDPOINT=minio
+      - MINIO_PORT=9000
+    depends_on:
+      - database
+      - minio
+    networks:
+      - sigeo_network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+      args:
+        - VITE_API_PROVIDER=${VITE_API_PROVIDER}
+        - VITE_NEST_API_URL=${VITE_NEST_API_URL}
+        - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+        - VITE_SUPABASE_PUBLISHABLE_KEY=${VITE_SUPABASE_PUBLISHABLE_KEY}
+    container_name: sigeo_frontend
+    command: npm run dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+    networks:
+      - sigeo_network
+
+volumes:
+  pgdata:
+  miniodata:
+
+networks:
+  sigeo_network:
+    driver: bridge

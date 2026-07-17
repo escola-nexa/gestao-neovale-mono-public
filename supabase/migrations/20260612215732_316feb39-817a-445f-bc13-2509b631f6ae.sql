@@ -1,0 +1,1 @@
+ALTER TABLE public.financial_payment_terms RENAME COLUMN is_active TO active;

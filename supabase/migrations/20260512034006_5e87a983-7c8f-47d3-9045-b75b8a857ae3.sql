@@ -1,0 +1,2 @@
+REVOKE EXECUTE ON FUNCTION public.materialize_grade_from_indications(uuid, text, boolean) FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.materialize_grade_from_indications(uuid, text, boolean) TO authenticated;

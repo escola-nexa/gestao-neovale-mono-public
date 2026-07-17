@@ -1,0 +1,2 @@
+REVOKE EXECUTE ON FUNCTION public.route_school_check_in(uuid, numeric, numeric, numeric, text) FROM PUBLIC, anon;
+REVOKE EXECUTE ON FUNCTION public.route_school_check_out(uuid, numeric, numeric, numeric, text, text, text) FROM PUBLIC, anon;

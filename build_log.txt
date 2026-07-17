@@ -1,0 +1,163 @@
+Building frontend
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 832B done
+#1 WARN: SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ARG "VITE_SUPABASE_PUBLISHABLE_KEY") (line 12)
+#1 WARN: SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "VITE_SUPABASE_PUBLISHABLE_KEY") (line 16)
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:18-alpine
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 137B done
+#3 DONE 0.0s
+
+#4 [builder 1/6] FROM docker.io/library/node:18-alpine
+#4 DONE 0.0s
+
+#5 [builder 2/6] WORKDIR /app
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 460.95kB 0.0s done
+#6 DONE 0.1s
+
+#7 [builder 3/6] COPY package*.json ./
+#7 DONE 0.1s
+
+#8 [builder 4/6] RUN npm install
+#8 0.967 npm warn EBADENGINE Unsupported engine {
+#8 0.967 npm warn EBADENGINE   package: '@supabase/auth-js@2.90.1',
+#8 0.967 npm warn EBADENGINE   required: { node: '>=20.0.0' },
+#8 0.967 npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+#8 0.967 npm warn EBADENGINE }
+#8 0.967 npm warn EBADENGINE Unsupported engine {
+#8 0.967 npm warn EBADENGINE   package: '@supabase/functions-js@2.90.1',
+#8 0.967 npm warn EBADENGINE   required: { node: '>=20.0.0' },
+#8 0.967 npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+#8 0.967 npm warn EBADENGINE }
+#8 0.968 npm warn EBADENGINE Unsupported engine {
+#8 0.968 npm warn EBADENGINE   package: '@supabase/postgrest-js@2.90.1',
+#8 0.968 npm warn EBADENGINE   required: { node: '>=20.0.0' },
+#8 0.968 npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+#8 0.968 npm warn EBADENGINE }
+#8 0.968 npm warn EBADENGINE Unsupported engine {
+#8 0.968 npm warn EBADENGINE   package: '@supabase/realtime-js@2.90.1',
+#8 0.968 npm warn EBADENGINE   required: { node: '>=20.0.0' },
+#8 0.968 npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+#8 0.968 npm warn EBADENGINE }
+#8 0.968 npm warn EBADENGINE Unsupported engine {
+#8 0.968 npm warn EBADENGINE   package: '@supabase/storage-js@2.90.1',
+#8 0.968 npm warn EBADENGINE   required: { node: '>=20.0.0' },
+#8 0.968 npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+#8 0.968 npm warn EBADENGINE }
+#8 0.968 npm warn EBADENGINE Unsupported engine {
+#8 0.968 npm warn EBADENGINE   package: '@supabase/supabase-js@2.90.1',
+#8 0.968 npm warn EBADENGINE   required: { node: '>=20.0.0' },
+#8 0.968 npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+#8 0.968 npm warn EBADENGINE }
+#8 0.970 npm warn EBADENGINE Unsupported engine {
+#8 0.970 npm warn EBADENGINE   package: 'iceberg-js@0.8.1',
+#8 0.970 npm warn EBADENGINE   required: { node: '>=20.0.0' },
+#8 0.970 npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+#8 0.970 npm warn EBADENGINE }
+#8 0.971 npm warn EBADENGINE Unsupported engine {
+#8 0.971 npm warn EBADENGINE   package: 'pdfjs-dist@5.7.284',
+#8 0.971 npm warn EBADENGINE   required: { node: '>=22.13.0 || >=24' },
+#8 0.971 npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+#8 0.971 npm warn EBADENGINE }
+#8 2.063 npm warn deprecated whatwg-encoding@2.0.0: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+#8 3.619 npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+#8 3.975 npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+#8 10.78 
+#8 10.78 added 614 packages, and audited 615 packages in 10s
+#8 10.78 
+#8 10.78 138 packages are looking for funding
+#8 10.78   run `npm fund` for details
+#8 10.83 
+#8 10.83 22 vulnerabilities (1 low, 7 moderate, 13 high, 1 critical)
+#8 10.83 
+#8 10.83 To address issues that do not require attention, run:
+#8 10.83   npm audit fix
+#8 10.83 
+#8 10.83 Some issues need review, and may require choosing
+#8 10.83 a different dependency.
+#8 10.83 
+#8 10.83 Run `npm audit` for details.
+#8 10.83 npm notice
+#8 10.83 npm notice New major version of npm available! 10.8.2 -> 11.17.0
+#8 10.83 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.17.0
+#8 10.83 npm notice To update run: npm install -g npm@11.17.0
+#8 10.83 npm notice
+#8 DONE 11.2s
+
+#9 [builder 5/6] COPY . .
+#9 DONE 0.3s
+
+#10 [builder 6/6] RUN npm run build
+#10 0.331 
+#10 0.331 > vite_react_shadcn_ts@0.0.0 build
+#10 0.331 > vite build
+#10 0.331 
+#10 0.510 vite v5.4.19 building for production...
+#10 0.559 transforming...
+#10 0.800 Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+#10 0.800   npx update-browserslist-db@latest
+#10 0.800   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#10 4.241 ✓ 68 modules transformed.
+#10 4.242 x Build failed in 3.71s
+#10 4.243 error during build:
+#10 4.243 [vite:esbuild] Transform failed with 1 error:
+#10 4.243 /app/src/features/alunos/ImportHistoryPage.tsx:218:0: ERROR: Unexpected "}"
+#10 4.243 file: /app/src/features/alunos/ImportHistoryPage.tsx:218:0
+#10 4.243 
+#10 4.243 Unexpected "}"
+#10 4.243 216|      </div>
+#10 4.243 217|    );
+#10 4.243 218|  }
+#10 4.243    |  ^
+#10 4.243 219|  
+#10 4.243 
+#10 4.243     at failureErrorWithLog (/app/node_modules/esbuild/lib/main.js:1472:15)
+#10 4.243     at /app/node_modules/esbuild/lib/main.js:755:50
+#10 4.243     at responseCallbacks.<computed> (/app/node_modules/esbuild/lib/main.js:622:9)
+#10 4.243     at handleIncomingPacket (/app/node_modules/esbuild/lib/main.js:677:12)
+#10 4.243     at Socket.readFromStdout (/app/node_modules/esbuild/lib/main.js:600:7)
+#10 4.243     at Socket.emit (node:events:517:28)
+#10 4.243     at addChunk (node:internal/streams/readable:368:12)
+#10 4.243     at readableAddChunk (node:internal/streams/readable:341:9)
+#10 4.243     at Readable.push (node:internal/streams/readable:278:10)
+#10 4.243     at Pipe.onStreamRead (node:internal/stream_base_commons:190:23)
+#10 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+------
+ > [builder 6/6] RUN npm run build:
+4.243     at failureErrorWithLog (/app/node_modules/esbuild/lib/main.js:1472:15)
+4.243     at /app/node_modules/esbuild/lib/main.js:755:50
+4.243     at responseCallbacks.<computed> (/app/node_modules/esbuild/lib/main.js:622:9)
+4.243     at handleIncomingPacket (/app/node_modules/esbuild/lib/main.js:677:12)
+4.243     at Socket.readFromStdout (/app/node_modules/esbuild/lib/main.js:600:7)
+4.243     at Socket.emit (node:events:517:28)
+4.243     at addChunk (node:internal/streams/readable:368:12)
+4.243     at readableAddChunk (node:internal/streams/readable:341:9)
+4.243     at Readable.push (node:internal/streams/readable:278:10)
+4.243     at Pipe.onStreamRead (node:internal/stream_base_commons:190:23)
+------
+
+ [33m2 warnings found (use docker --debug to expand):
+[0m - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ARG "VITE_SUPABASE_PUBLISHABLE_KEY") (line 12)
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "VITE_SUPABASE_PUBLISHABLE_KEY") (line 16)
+Dockerfile:19
+--------------------
+  17 |     
+  18 |     COPY . .
+  19 | >>> RUN npm run build
+  20 |     
+  21 |     # Etapa 2: Servir os arquivos estáticos
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+Service 'frontend' failed to build : Build failed

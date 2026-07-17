@@ -1,0 +1,25 @@
+project_id = "sczpzqxedmzkddumncbh"
+
+[functions.generate-pre-plannings]
+verify_jwt = false
+
+[functions.update-user-password]
+verify_jwt = false
+
+[functions.validate-external-access]
+verify_jwt = false
+
+[functions.hash-keyword]
+verify_jwt = false
+
+[functions.create-ticket-external]
+verify_jwt = false
+
+[functions.validate-ticket-external]
+verify_jwt = false
+
+[functions.push-notify]
+verify_jwt = false
+
+[functions.pwa-manifest]
+verify_jwt = false

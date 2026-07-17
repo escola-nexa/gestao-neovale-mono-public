@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sem conexão — Neovale</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    font-family: 'Sora', system-ui, sans-serif;
+    background: #1B1E2C; color: #FFDA45; padding: 24px;
+  }
+  .card {
+    max-width: 420px; width: 100%; text-align: center;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,218,69,0.2);
+    border-radius: 16px; padding: 32px;
+  }
+  h1 { margin: 0 0 8px; font-size: 24px; }
+  p { margin: 0 0 24px; color: #cbd5e1; font-size: 15px; line-height: 1.5; }
+  button {
+    background: #FFDA45; color: #1B1E2C; border: 0; padding: 12px 24px;
+    border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;
+  }
+  .icon { font-size: 48px; margin-bottom: 16px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">📡</div>
+    <h1>Sem conexão</h1>
+    <p>Você está offline. Verifique sua internet e tente novamente.</p>
+    <button onclick="location.reload()">Tentar novamente</button>
+  </div>
+</body>
+</html>

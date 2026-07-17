@@ -1,0 +1,1 @@
+ALTER TYPE public.teacher_planning_status ADD VALUE IF NOT EXISTS 'CONCLUIDO';

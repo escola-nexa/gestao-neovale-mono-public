@@ -1,0 +1,1 @@
+ALTER TABLE public.professor_documents DROP COLUMN IF EXISTS weekly_workload_hours;

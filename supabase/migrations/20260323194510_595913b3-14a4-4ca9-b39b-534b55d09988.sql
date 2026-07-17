@@ -1,0 +1,1 @@
+ALTER TABLE public.school_visits ADD COLUMN IF NOT EXISTS weekly_schedule jsonb DEFAULT NULL;

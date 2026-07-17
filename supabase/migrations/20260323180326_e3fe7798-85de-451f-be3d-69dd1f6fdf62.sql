@@ -1,0 +1,1 @@
+ALTER TABLE public.subjects DROP CONSTRAINT IF EXISTS subjects_course_id_codigo_key;

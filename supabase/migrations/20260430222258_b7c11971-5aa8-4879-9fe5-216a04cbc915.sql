@@ -1,0 +1,1 @@
+DROP FUNCTION IF EXISTS public.submit_school_indication_full(text, text, uuid, jsonb, jsonb);

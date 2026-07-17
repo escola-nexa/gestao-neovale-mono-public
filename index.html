@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR" translate="no">
+  <head>
+    <link rel="preconnect" href="https://cdn.gpteng.co" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bloqueia tradução automática (Google Translate, Edge, Safari) que substitui
+         text nodes e quebra a reconciliação do React causando "removeChild" / "insertBefore". -->
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="Content-Language" content="pt-BR" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="https://sczpzqxedmzkddumncbh.supabase.co/functions/v1/pwa-manifest" />
+    <meta name="theme-color" content="#1B1E2C" />
+    <!-- apple-touch-icon e apple-mobile-web-app-title são injetados dinamicamente
+         por src/components/pwa/PwaHeadSync.tsx a partir de pwa_settings.
+         Mantemos um fallback estático para o primeiro paint antes da hidratação. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Neovale" />
+    <link rel="apple-touch-icon" href="/nexa-logo.svg" />
+    <title>Neovale - Gestão Acadêmica</title>
+    <meta name="description" content="Neovale - Sistema de Gestão Acadêmica" />
+    <meta name="author" content="Neovale" />
+
+    <meta property="og:title" content="Neovale - Gestão Acadêmica" />
+    <meta property="og:description" content="Neovale - Sistema de Gestão Acadêmica" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+            console.log('Service Worker unregistered forcefully.');
+          }
+        });
+      }
+    </script>
+  </head>
+
+  <body class="notranslate" translate="no">
+    <div id="root" class="notranslate" translate="no"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

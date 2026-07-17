@@ -1,0 +1,1 @@
+ALTER TABLE public.orientations ADD COLUMN cancellation_reason text;

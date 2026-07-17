@@ -1,0 +1,1 @@
+ALTER TABLE public.subjects ADD COLUMN nome_boletim text NULL;

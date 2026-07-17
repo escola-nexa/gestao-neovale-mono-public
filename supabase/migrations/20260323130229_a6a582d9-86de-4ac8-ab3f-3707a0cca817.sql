@@ -1,0 +1,1 @@
+ALTER TYPE public.nivel_ensino ADD VALUE IF NOT EXISTS 'profissional';

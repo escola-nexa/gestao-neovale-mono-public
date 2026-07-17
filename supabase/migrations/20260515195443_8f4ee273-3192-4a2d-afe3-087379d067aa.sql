@@ -1,0 +1,2 @@
+ALTER TABLE public.library_contents ADD COLUMN IF NOT EXISTS lesson_number integer CHECK (lesson_number IS NULL OR (lesson_number BETWEEN 1 AND 500));
+CREATE INDEX IF NOT EXISTS idx_library_contents_subject_lesson ON public.library_contents (subject_id, lesson_number) WHERE subject_id IS NOT NULL AND lesson_number IS NOT NULL;

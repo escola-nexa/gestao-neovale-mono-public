@@ -1,0 +1,2 @@
+ALTER TABLE public.orientations DROP CONSTRAINT orientations_status_check;
+ALTER TABLE public.orientations ADD CONSTRAINT orientations_status_check CHECK (status = ANY (ARRAY['AGENDADO'::text, 'REALIZADO'::text, 'CANCELADO'::text, 'AGUARDANDO_ASSINATURA_PROFESSOR'::text, 'ASSINADO_PROFESSOR'::text]));
